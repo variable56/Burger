@@ -4,12 +4,14 @@ console.log('loaded');
 $(function() {
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
-      var newDevoured = $(this).data("newDevoured");
+      //This is the line that comes back undefined no matter if I change the name in my partials file
+      var newDevoured = $(this).data("newdevoured");
   
       var newDevouredState = {
         devoured: newDevoured
       };
-  
+      console.log(id);
+      console.log(newDevoured);
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
