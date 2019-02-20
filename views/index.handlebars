@@ -1,8 +1,16 @@
-<h1>Burger Town!!!</h1>
+{{!-- <h1>Burger Town!!!</h1> --}}
+<div class="text-center m-3">
+  <h1>BURGER TOWN!!!</h1>
+<img src="https://i.imgur.com/zfjFeqX.gif" alt="cosmic burger">
+</div>
 
-<h2>Burgers that are not eaten</h2>
+<p><h4>Welcome to Burger Town! Interact with each of the burgers by marking them as eaten, or not eaten.  You may also delete any burger, or create your own and add it at the bottom using the form.</h4></p>
 
-<ul>
+<div class="container">
+<h2 class="text-center m-3">Burgers That Are Not Eaten</h2>
+
+
+<ul class="">
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block devoured=true}}
@@ -10,17 +18,17 @@
   {{/each}}
 </ul>
 
-<h2>Burgers that have been eaten</h2>
+<h2 class="text-center m-3">Burgers That Have Been Eaten</h2>
 
-<ul>
+<ul class="">
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
-
-<h2>Add a Burger</h2>
+<div class="text-center">
+<h2 class="m-3">Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
@@ -34,5 +42,7 @@
     <input type="radio" name="devoured" value="0"> Not Eaten
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button class="btn-lg btn-block btn-primary addbutton" type="submit">Add Burger</button>
 </form>
+</div>
+</div>

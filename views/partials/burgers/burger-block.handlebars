@@ -1,9 +1,14 @@
 <li>
-	{{burger_name}}
+	<div class="d-flex justify-content-between">
+	<p class="col-md-8 m-0"><span class="align-middle">{{burger_name}}</span></p>
 
-	<button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
+	
+	<button class="col-md-2 change-devoured btn btn-success btn-sm m-1 align-middle" data-id="{{id}}" data-newDevoured="{{devoured}}">
 		{{#if devoured}}DEE LISH!{{else}}NOT EATEN!{{/if}}
 	</button>
 
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+
+	
+	<button class="col-md-2 delete-burger btn btn-danger btn-sm m-1" data-id="{{this.id}}">DELETE!</button>
+	</div>
 </li>
